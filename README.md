@@ -10,6 +10,23 @@ Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
  - [go-bindata](https://github.com/jteeuwen/go-bindata)
 
 ## Instructions
+### Deploy via Docker
+
+Build image
+```
+docker build . -t izikaj/geoip
+```
+
+Deploy it to AWS
+```
+docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYYYYY" -it izikaj/geoip
+```
+
+To run shell on image:
+```
+docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYYYYY" -it izikaj/geoip
+```
+
 ### go language
 [Download binary](https://golang.org/dl/)
 
@@ -35,9 +52,10 @@ make deploy
 
 It should build and deploy the Lambda. It may take a little bit due to the size of the database file.
 
-
-## TODO list
+## Features:
 - build & deploy via [docker](https://www.docker.com/)
+
+## TODO:
 - return errors as valid JSON object
 - change `geocoder` function to work with [geocoder-izi-lookup](https://github.com/IzikAJ/geocoder-izi-lookup) propely
 - split code to modules

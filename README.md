@@ -1,4 +1,4 @@
-This is a refactor of an old Go Lambda that creates an API that will return a visitor's geolocation based on IP address.
+Repo for easy creating geoip API based on AWS lambda and Maxmind's GeoLite2 database.
 
 Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
 

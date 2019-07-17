@@ -10,6 +10,10 @@ Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
  - [go-bindata](https://github.com/jteeuwen/go-bindata)
 
 ## Instructions
+### goalng
+[Download binary](https://golang.org/dl/)
+
+[Install Guide](https://golang.org/doc/install)
 
 ### go-bindata
 ```go get -u github.com/jteeuwen/go-bindata/go-bindata```

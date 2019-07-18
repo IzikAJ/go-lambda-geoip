@@ -10,7 +10,7 @@ Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
  - [go-bindata](https://github.com/jteeuwen/go-bindata)
 
 ## Instructions
-### Deploy via Docker
+### Deploy with Docker
 
 Build image
 ```
@@ -24,7 +24,7 @@ docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYY
 
 To run shell on image:
 ```
-docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYYYYY" -it izikaj/geoip
+docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYYYYY" -it izikaj/geoip sh
 ```
 
 ### go language

@@ -9,6 +9,9 @@ Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
  - [Serverless Framework](https://serverless.com/)
  - [go-bindata](https://github.com/jteeuwen/go-bindata)
 
+### Useful links
+ - [AWS FreeTier usage stats](https://console.aws.amazon.com/billing/home?#/freetier)
+
 ## Instructions
 ### Deploy via Docker
 

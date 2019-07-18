@@ -2,6 +2,7 @@
 /.vscode
 /.serverless
 /bin
+node_modules
 
 *bindata.go
 GeoLite2*

@@ -22,6 +22,18 @@ provider:
       burstLimit: 20
       rateLimit: 10
 
+  tracing: true # enable tracing
+  iamRoleStatements:
+    - Effect: "Allow" # xray permissions (required)
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
+
+plugins:
+  - serverless-plugin-tracing
+
 package:
   individually: true
 

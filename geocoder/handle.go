@@ -9,7 +9,7 @@ import (
 )
 
 func handleRequest(ctx context.Context, request events.APIGatewayProxyRequest) (shared.Response, error) {
-	remote := request.QueryStringParameters["remote"]
+	remote := request.QueryStringParameters["ip"]
 
 	parsedIP := net.ParseIP(remote)
 

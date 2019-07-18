@@ -17,21 +17,20 @@ func main() {
 	var err error
 	var data []byte
 
-	ctx, seg := xray.BeginSegment(context.Background(), "GeoipInit")
+	ctx, seg := xray.BeginSegment(context.Background(), "GeoipMicroservice")
 
 	err = xray.Capture(ctx, "LoadBytes", func(ctx1 context.Context) error {
 		data, err = Asset(dbName)
+		xray.AddMetadata(ctx, "LoadBytesCompleted", err)
 		return err
 	})
 
 	if err == nil {
 		xray.Capture(ctx, "DatabaseFromBytes", func(ctx1 context.Context) error {
-			db, _ = geoip2.FromBytes(data)
+			db, err = geoip2.FromBytes(data)
 			return nil
 		})
 		defer db.Close()
-
-		// Close the segment and subsegment
 		seg.Close(nil)
 
 		lambda.Start(handleRequest)

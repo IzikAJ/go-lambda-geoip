@@ -30,8 +30,6 @@ func main() {
 			return nil
 		})
 		defer db.Close()
-
-		// Close the segment and subsegment
 		seg.Close(nil)
 
 		lambda.Start(handleRequest)

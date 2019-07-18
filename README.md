@@ -56,8 +56,7 @@ It should build and deploy the Lambda. It may take a little bit due to the size 
 - build & deploy via [docker](https://www.docker.com/)
 
 ## TODO:
-- return errors as valid JSON object
+- return errors more detailed errors
 - change `geocoder` function to work with [geocoder-izi-lookup](https://github.com/IzikAJ/geocoder-izi-lookup) propely
-- split code to modules
 - write tests
 - refactor code

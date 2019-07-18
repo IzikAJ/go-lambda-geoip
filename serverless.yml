@@ -32,7 +32,7 @@ functions:
     package:
       individually: true
       include:
-        - ./bin/city
+        - bin/city
       exclude:
         - ./**
     events:
@@ -46,7 +46,7 @@ functions:
     package:
       individually: true
       include:
-        - ./bin/country
+        - bin/country
       exclude:
         - ./**
     events:
@@ -55,12 +55,12 @@ functions:
           method: get
       - schedule: rate(5 minutes)
   geocoder:
-    handler: bin/geocoder-izi-lookup
+    handler: bin/geocoder
     memorySize: 128
     package:
       individually: true
       include:
-        - ./bin/geocoder-izi-lookup
+        - bin/geocoder
       exclude:
         - ./**
     events:

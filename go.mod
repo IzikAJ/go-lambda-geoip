@@ -3,6 +3,7 @@ module github.com/izikaj/go-lambda-geoip
 go 1.12
 
 require (
+	github.com/DATA-DOG/go-sqlmock v1.3.3 // indirect
 	github.com/aws/aws-lambda-go v1.11.1
 	github.com/aws/aws-sdk-go v1.20.20 // indirect
 	github.com/aws/aws-xray-sdk-go v1.0.0-rc.3

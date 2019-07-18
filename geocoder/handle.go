@@ -19,5 +19,5 @@ func handleRequest(ctx context.Context, request events.APIGatewayProxyRequest) (
 		return shared.AsError(remote, err)
 	}
 
-	return shared.AsData(remote, country)
+	return shared.AsData(remote, fromGeoipCountry(remote, country))
 }

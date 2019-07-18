@@ -15,15 +15,13 @@ var jsonHeaders = map[string]string{
 
 // JSONError - error struct
 type JSONError struct {
-	IP      string
-	Error   string
-	Message string
+	IP      string `json:"ip"`
+	Error   string `json:"error"`
+	Message string `json:"message"`
 }
 
 func jsonError(ip string, err error) string {
-	// TODO
-	// detect error kind
-	errData := JSONError{ip, "some_error", err.Error()}
+	errData := JSONError{ip, "invalid", err.Error()}
 	data, _ := json.Marshal(errData)
 	return string(data)
 }

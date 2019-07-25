@@ -13,9 +13,10 @@ RUN make download && make build
 # FROM node:lts-slim
 FROM node:lts-slim
 
-RUN npm install serverless -g && mkdir -p /usr/local/app/bin
+RUN mkdir -p /usr/local/app/bin
 WORKDIR /usr/local/app
 COPY --from=builder /app/bin ./bin
-COPY serverless.yml ./
+COPY serverless.yml package.json package-lock.json ./
+RUN npm install
 
-CMD ["/usr/local/bin/serverless", "deploy", "--verbose"]
+CMD ["npm", "run", "deploy"]

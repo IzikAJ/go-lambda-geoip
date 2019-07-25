@@ -4,7 +4,8 @@
   "description": "Repo for easy creating geoip API based on AWS lambda and Maxmind's GeoLite2 database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "serverless deploy --verbose"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "url": "https://github.com/izikaj/go-lambda-geoip/issues"
   },
   "homepage": "https://github.com/izikaj/go-lambda-geoip#readme",
-  "devDependencies": {
+  "dependencies": {
     "serverless": "^1.47.0",
     "serverless-plugin-tracing": "^2.0.0"
   }

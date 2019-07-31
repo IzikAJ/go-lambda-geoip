@@ -4,7 +4,7 @@ import (
 	"github.com/oschwald/geoip2-golang"
 )
 
-var in_eu = []string{
+var inEu = []string{
 	"AT",
 	"AX",
 	"BE",
@@ -42,7 +42,7 @@ var in_eu = []string{
 
 func isInEu(country *geoip2.Country) bool {
 	code := country.Country.IsoCode
-	for _, a := range in_eu {
+	for _, a := range inEu {
 		if a == code {
 			return true
 		}

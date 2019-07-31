@@ -12,10 +12,13 @@ pre-commit:
     #   files: find .
     #   glob: "*.{go}"
     #   run: gosec ./city ./country ./geocoder
-
-    govet_city:
-      run: go vet city/*
-    govet_country:
-      run: go vet country/*
-    govet_geocoder:
-      run: go vet geocoder/*
+    lint:
+      files: find . | grep -v 'node_modules'
+      glob: "*.{go}"
+      run: revive {files}
+    # govet_city:
+    #   run: go vet city/*
+    # govet_country:
+    #   run: go vet country/*
+    # govet_geocoder:
+    #   run: go vet geocoder/*

@@ -17,7 +17,7 @@ pre-commit:
       run: revive {files}
 
     coverage:
-      run: go test -covermode=count -coverprofile=count.out fmt
+      run: go test -covermode=count fmt
 
     # govet_city:
     #   run: go vet city/*

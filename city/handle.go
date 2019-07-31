@@ -12,7 +12,6 @@ func handleRequest(ctx context.Context, request events.APIGatewayProxyRequest) (
 	remote := request.QueryStringParameters["remote"]
 
 	parsedIP := net.ParseIP(remote)
-
 	country, err := db.City(parsedIP)
 
 	if err != nil {

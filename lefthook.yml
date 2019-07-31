@@ -13,14 +13,11 @@ pre-commit:
     #   glob: "*.{go}"
     #   run: gosec ./city ./country ./geocoder
     lint:
-      files: find . | grep -v 'node_modules'
-      glob: "*.{go}"
+      files: find . | grep -v 'node_modules' | grep '\.go'
       run: revive {files}
 
     coverage:
-      files: git diff --name-only @{push}
-      glob: "*.{go}"
-      run: go test -cover {files}
+      run: go test -covermode=count -coverprofile=count.out fmt
 
     # govet_city:
     #   run: go vet city/*

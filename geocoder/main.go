@@ -26,7 +26,7 @@ func main() {
 	})
 
 	if err == nil {
-		xray.Capture(ctx, "DatabaseFromBytes", func(ctx1 context.Context) error {
+		xray.Capture(ctx, "DatabaseFromBytes...", func(ctx1 context.Context) error {
 			db, err = geoip2.FromBytes(data)
 			return nil
 		})

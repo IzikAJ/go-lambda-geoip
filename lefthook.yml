@@ -16,6 +16,12 @@ pre-commit:
       files: find . | grep -v 'node_modules'
       glob: "*.{go}"
       run: revive {files}
+
+    coverage:
+      files: git diff --name-only @{push}
+      glob: "*.{go}"
+      run: go test -cover {files}
+
     # govet_city:
     #   run: go vet city/*
     # govet_country:

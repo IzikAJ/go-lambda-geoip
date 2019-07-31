@@ -1,0 +1,21 @@
+pre-commit:
+  parallel: true
+  commands:
+    # audit:
+    #   run: brakeman
+    # rubocop:
+    #   files: git diff --name-only @{push}
+    #   glob: "*.{rb}"
+    #   run: rubocop {files}
+
+    # gosec:
+    #   files: find .
+    #   glob: "*.{go}"
+    #   run: gosec ./city ./country ./geocoder
+
+    govet_city:
+      run: go vet city/*
+    govet_country:
+      run: go vet country/*
+    govet_geocoder:
+      run: go vet geocoder/*

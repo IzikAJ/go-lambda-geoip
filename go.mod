@@ -9,6 +9,7 @@ require (
 	github.com/aws/aws-sdk-go v1.20.20 // indirect
 	github.com/aws/aws-xray-sdk-go v1.0.0-rc.3
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575 // indirect
+	github.com/fnproject/fdk-go v0.0.2
 	github.com/google/go-tika v0.1.21 // indirect
 	github.com/jteeuwen/go-bindata v3.0.7+incompatible // indirect
 	github.com/mgechev/revive v0.0.0-20190731002425-227ec43d09e0 // indirect

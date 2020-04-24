@@ -17,7 +17,7 @@ Inspired by [tmaiaroto/go-lambda-geoip](github.com/tmaiaroto/go-lambda-geoip).
 
 Build image
 ```
-docker build . -t izikaj/geoip
+docker build . -t izikaj/geoip --build-arg MAXMIND_LICENSE_KEY=$MAXMIND_LICENSE_KEY
 ```
 
 Deploy it to AWS

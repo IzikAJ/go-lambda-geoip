@@ -1,8 +1,8 @@
 .PHONY: download build clean purify deploy
 
 download:
-	curl -o GeoLite2-City.tar.gz http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
-	curl -o GeoLite2-Country.tar.gz http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+	curl -o GeoLite2-City.tar.gz "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=$(MAXMIND_LICENSE_KEY)&suffix=tar.gz"
+	curl -o GeoLite2-Country.tar.gz "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=$(MAXMIND_LICENSE_KEY)&suffix=tar.gz"
 
 purify:
 	echo '' > GeoLite2-Country.mmdb

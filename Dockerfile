@@ -8,6 +8,8 @@ RUN \
 COPY . /app
 WORKDIR /app
 
+# ENV MAXMIND_LICENSE_KEY=$MAXMIND_LICENSE_KEY
+ARG MAXMIND_LICENSE_KEY
 RUN make download && make build
 
 # FROM node:lts-slim

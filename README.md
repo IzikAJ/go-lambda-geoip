@@ -47,6 +47,7 @@ Download fresh Maxmind's database:
 ```
 make download
 ```
+To receive access to download the GeoLite2 databases, it now requires [registration](https://www.maxmind.com/en/geolite2/signup) and [license key](https://www.maxmind.com/en/account/login) usage.
 
 Deploy stack:
 ```

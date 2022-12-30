@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/izikaj/go-lambda-geoip#readme",
   "dependencies": {
-    "serverless": "^1.47.0",
+    "serverless": "^1.83.3",
     "serverless-plugin-tracing": "^2.0.0"
   }
 }

@@ -36,7 +36,7 @@ docker run -e AWS_ACCESS_KEY_ID="XXXXXXXXX" -e AWS_SECRET_ACCESS_KEY="YYYYYYYYYY
 [Install Guide](https://golang.org/doc/install)
 
 ### go-bindata
-```go get -u github.com/jteeuwen/go-bindata/go-bindata```
+```go install github.com/jteeuwen/go-bindata/go-bindata```
 
 ### if all set
 Assuming you have AWS credentials configured and you've got the `serverless` and `go-bindata` ready to use.
@@ -63,3 +63,7 @@ It should build and deploy the Lambda. It may take a little bit due to the size 
 - write tests
 - return errors more detailed errors
 - refactor code
+
+```
+arch -x86_64 zsh
+```

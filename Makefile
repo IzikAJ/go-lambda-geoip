@@ -28,9 +28,9 @@ build:
 	go-bindata -nocompress -o city/bindata.go GeoLite2-City.mmdb
 	rm GeoLite2-City.mmdb
 
-	env GOOS=linux go build -ldflags="-s -w" -o bin/country country/*.go
-	env GOOS=linux go build -ldflags="-s -w" -o bin/city city/*.go
-	env GOOS=linux go build -ldflags="-s -w" -o bin/geocoder geocoder/*.go
+	env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o bin/country country/*.go
+	env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o bin/city city/*.go
+	env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o bin/geocoder geocoder/*.go
 
 clean: purify
 	rm -rf ./bin
